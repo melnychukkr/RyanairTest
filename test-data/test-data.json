@@ -1,0 +1,44 @@
+{
+  "customer": {
+    "email": "kuliievakarolina@gmail.com",
+    "application_password": "r2yAnair",
+    "username": "Karolina",
+    "title": "Ms",
+    "name": "Karolina",
+    "surname": "Meln"
+  },
+  "flight": {
+    "from": {
+      "airportCode": "WRO",
+      "airportCountry": "Poland",
+      "airportCity": "Wroclaw"
+    },
+    "to": {
+      "airportCode": "LIS",
+      "airportCountry": "Portugal",
+      "airportCity": "Lisbon"
+    },
+    "date": "31-03-2018",
+    "fare": "standard"
+  },
+  "order": {
+    "passenger": {
+      "title": "Mr",
+      "name": "John",
+      "surname": "Smith"
+    },
+    "billingAddress": {
+      "address1": "address 1",
+      "city": "Wroclaw",
+      "postalCode": "50-874"
+    }
+  },
+  "card": {
+    "number": "5555555555555557",
+    "type": "MasterCard",
+    "expiryMonth": "6",
+    "expiryYear": "2019",
+    "cvv": "159",
+    "holderName": "Karolina Meln"
+  }
+}
