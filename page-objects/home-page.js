@@ -1,7 +1,7 @@
 var HomePage = function() {
 
   this.openHomePage = function() {
-    browser.get('http://www.ryanair.com');
+    browser.get('http://www.ryanair.com/ie/en/');
   };
 
   this.logIn = function(username, password) {
@@ -20,7 +20,7 @@ var HomePage = function() {
     if(!isPickerOpen) {
       airport.click();
     }
-    
+
     var countryDeparture = element(by.cssContainingText('div.core-list-item', departureCountry));
     scrollIntoViewAndClick(countryDeparture);
 
@@ -47,9 +47,10 @@ var HomePage = function() {
   };
 
   this.selectFlyOutDate = function(date) {
-    var flyOutDateInput = element(by.model('dateRange.startDate'));
-    flyOutDateInput.click();
-    element(by.css("[data-id='" + date + "']")).click();
+    var parsedDate = date.split("-");
+    element(by.name("dateInput0")).sendKeys(parsedDate[0]);
+    element(by.name("dateInput1")).sendKeys(parsedDate[1]);
+    element(by.name("dateInput2")).sendKeys(parsedDate[2]);
   };
 
   this.setNumberOfPassengers = function(adults) {

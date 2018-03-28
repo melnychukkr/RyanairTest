@@ -3,12 +3,9 @@ var constants = require('../utils/constants.js');
 var PaymentPage = function() {
 
   this.fillPassengerInfo = function(title, name, surname) {
-    browser.sleep(constants.PAYMENTS_PAGE_HARDCODED_TIMEOUT);
-    browser.waitForAngularEnabled(false);
-    element(by.model('passenger.name.title')).sendKeys(title);
-    element(by.model('passenger.name.first')).sendKeys(name);
-    element(by.model('passenger.name.last')).sendKeys(surname);
-    browser.waitForAngularEnabled(true);
+    element(by.model('$ctrl.pax.name.title')).sendKeys(title);
+    element(by.model("$ctrl.pax.name.first")).sendKeys(name);
+    element(by.model('$ctrl.pax.name.last')).sendKeys(surname);
   };
 
   this.fillCardInfo = function(cardNumber, cardType, expiryMonth, expiryYear, cvv, cardHolderName) {

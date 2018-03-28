@@ -9,12 +9,10 @@
   },
   "flight": {
     "from": {
-      "airportCode": "WRO",
       "airportCountry": "Poland",
       "airportCity": "Wroclaw"
     },
     "to": {
-      "airportCode": "LIS",
       "airportCountry": "Portugal",
       "airportCity": "Lisbon"
     },

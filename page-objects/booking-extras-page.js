@@ -1,10 +1,7 @@
 var BookingExtrasPage = function() {
 
   this.proceedToPayment = function() {
-    var checkOutButton = element(by.css("button[data-ref='header-checkout-btn']"));
-      checkOutButton.isDisplayed().then(function (isVisible) {
-        checkOutButton.click();
-    });
+    element(by.className("core-btn-primary core-btn-block core-btn-medium")).click();
   };
 
   this.declineThePopUp = function() {

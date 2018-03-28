@@ -19,17 +19,19 @@ var BookingDetailsPage = function() {
   };
 
   this.clickContinueWhenFareIsSelected = function() {
-    element(by.css('#continue')).click();
+      var continueButton = element(by.className("core-btn-primary core-btn-block core-btn-medium"));
+      browser.wait(protractor.ExpectedConditions.presenceOf(continueButton), constants.CUSTOM_WAIT_TIMEOUT);
+      continueButton.click();
   };
 
   getSelectFareButton = function(fareType) {
     var selectFareButton;
-    if (fareType == "standard") {
-        selectFareButton = element(by.css("div.standard #continue"));
-    } else if (fareType == "plus") {
-        selectFareButton = element(by.css("div.leisure-plus #continue"));
-    } else if (fareType == "business") {
-      selectFareButton = element(by.css("div.business-plus #continue"));
+    if (fareType === "standard") {
+        selectFareButton = element(by.className("flights-table-fares__fare fare-select standard"));
+    } else if (fareType === "plus") {
+        selectFareButton = element(by.className("flights-table-fares__fare fare-select leisure-plus middle"));
+    } else if (fareType === "business") {
+      selectFareButton = element(by.className("flights-table-fares__fare fare-select business-plus last"));
     } else {
       throw "[ERROR] clickSelectFare(): please check value of passed argument: " + fareType;
     }
